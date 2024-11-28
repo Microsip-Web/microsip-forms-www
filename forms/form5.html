@@ -1,135 +1,456 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vacantes</title>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            orange: '#ff8623',
-            textGray: '#717e8a',
-            inputGray: '#e9eaed'
-          }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vacantes</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              orange: "#ff8623",
+              textGray: "#717e8a",
+              inputGray: "#e9eaed",
+            },
+          },
+          fontFamily: {
+            sora: ["Sora", "sans-serif"],
+          },
         },
-        fontFamily: {
-          sora: ['Sora', 'sans-serif']
+      };
+    </script>
+  </head>
+  <body>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <form
+      id="__vtigerWebForm171829099bbffa9fcc55b1481bf49db5"
+      class="__vtigerWebForm"
+      name="Bolsa de trabajo"
+      action="https://microsipmtz.mantic360.net/modules/Webforms/capture.php"
+      method="post"
+      accept-charset="utf-8"
+      enctype="multipart/form-data"
+    >
+      <input
+        type="hidden"
+        name="__vtrftk"
+        value="sid:a87f91640478c4e56d12558ab8b7d41d2762434e,1732229663"
+      /><input
+        type="hidden"
+        name="publicid"
+        value="171829099bbffa9fcc55b1481bf49db5"
+      /><input type="hidden" name="urlencodeenable" value="1" /><input
+        type="hidden"
+        name="name"
+        value="Bolsa de trabajo"
+      />
+      <table class="w-full font-sora">
+        <tbody>
+          <tr class="grid mb-2">
+            <td>
+              <label class="font-medium pl-2 text-textGray">Nombres*</label>
+            </td>
+            <td>
+              <input
+                type="text"
+                name="firstname"
+                data-label=""
+                value=""
+                required=""
+                class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              />
+            </td>
+          </tr>
+          <tr class="grid mb-2">
+            <td>
+              <label class="font-medium pl-2 text-textGray">Apellidos*</label>
+            </td>
+            <td>
+              <input
+                type="text"
+                name="lastname"
+                data-label=""
+                value=""
+                required=""
+                class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              />
+            </td>
+          </tr>
+          <tr class="grid mb-2">
+            <td>
+              <label class="font-medium pl-2 text-textGray">E-mail*</label>
+            </td>
+            <td>
+              <input
+                type="email"
+                name="email"
+                data-label=""
+                value=""
+                required=""
+                class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              />
+            </td>
+          </tr>
+          <tr class="grid mb-2">
+            <td>
+              <label class="font-medium pl-2 text-textGray"
+                >Teléfono móvil*</label
+              >
+            </td>
+            <td>
+              <input
+                type="tel"
+                name="mobile"
+                data-label=""
+                value=""
+                pattern="[0-9]{10}"
+                title="Por favor ingrese un número telefónico válido de 10 dígitos"
+                required=""
+                class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              />
+            </td>
+          </tr>
+          <tr class="grid mb-2">
+            <td>
+              <label class="font-medium pl-2 text-textGray">Estado*</label>
+            </td>
+            <td>
+              <select
+                name="cf_1448"
+                data-label="label:Estado"
+                required=""
+                class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 appearance-none cursor-pointer"
+              >
+                <option value="">Seleccionar valor</option>
+                <option value="Aguascalientes">Aguascalientes</option>
+                <option value="Baja California">Baja California</option>
+                <option value="Baja California Sur">Baja California Sur</option>
+                <option value="Campeche">Campeche</option>
+                <option value="Coahuila">Coahuila</option>
+                <option value="Colima">Colima</option>
+                <option value="Chiapas">Chiapas</option>
+                <option value="Chihuahua">Chihuahua</option>
+                <option value="CDMX">CDMX</option>
+                <option value="Durango">Durango</option>
+                <option value="Guanajuato">Guanajuato</option>
+                <option value="Guerrero">Guerrero</option>
+                <option value="Hidalgo">Hidalgo</option>
+                <option value="Jalisco">Jalisco</option>
+                <option value="Edo. de México">Edo. de México</option>
+                <option value="Michoacan">Michoacan</option>
+                <option value="Morelos">Morelos</option>
+                <option value="Nayarit">Nayarit</option>
+                <option value="Nuevo León">Nuevo León</option>
+                <option value="Oaxaca">Oaxaca</option>
+                <option value="Puebla">Puebla</option>
+                <option value="Querétaro">Querétaro</option>
+                <option value="Quintana Roo">Quintana Roo</option>
+                <option value="San Luis Potosí">San Luis Potosí</option>
+                <option value="Sinaloa">Sinaloa</option>
+                <option value="Sonora">Sonora</option>
+                <option value="Tabasco">Tabasco</option>
+                <option value="Tamaulipas">Tamaulipas</option>
+                <option value="Tlaxcala">Tlaxcala</option>
+                <option value="Veracruz">Veracruz</option>
+                <option value="Yucatán">Yucatán</option>
+                <option value="Zacatecas">Zacatecas</option>
+              </select>
+            </td>
+          </tr>
+          <tr class="grid mb-2">
+            <td>
+              <label class="font-medium pl-2 text-textGray"
+                >Ciudad o Municipio*</label
+              >
+            </td>
+            <td>
+              <input
+                type="text"
+                name="cf_1450"
+                data-label=""
+                value=""
+                required=""
+                class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              />
+            </td>
+          </tr>
+          <tr class="grid mb-2">
+            <td>
+              <label class="font-medium pl-2 text-textGray">Escolaridad*</label>
+            </td>
+            <td>
+              <input
+                type="text"
+                name="cf_1458"
+                data-label=""
+                value=""
+                required=""
+                class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              />
+            </td>
+          </tr>
+          <tr class="grid mb-2">
+            <td>
+              <label class="font-medium pl-2 text-textGray">Vacantes*</label>
+            </td>
+            <td>
+              <select
+                name="cf_1456"
+                data-label="label:Vacantes"
+                required=""
+                class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 appearance-none cursor-pointer"
+              >
+                <option value="">Seleccionar vacante</option>
+                <option value="Aliado en Soporte Técnico">
+                  Aliado en Soporte Técnico
+                </option>
+                <option value="Desarrollador de Software Junior">
+                  Desarrollador de Software Junior
+                </option>
+              </select>
+            </td>
+          </tr>
+          <tr class="flex items-center justify-between mb-2">
+            <td>
+              <label
+                for="recibir-correos"
+                class="pl-2 font-medium text-textGray"
+                >Recibir correos de Microsip</label
+              >
+            </td>
+            <td>
+              <input
+                type="hidden"
+                name="cf_1454"
+                data-label=""
+                value="0"
+              /><input
+                type="checkbox"
+                name="cf_1454"
+                data-label=""
+                value="1"
+                class="bg-inputGray text-gray-900 text-sm rounded-lg focus:ring-orange focus:border-orange block h-5 w-5 p-2.5 appearance-none checked:bg-orange"
+                id="recibir-correos"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <select name="cf_1460" data-label="label:Procedencia" hidden="">
+                <option value="">Seleccionar valor</option>
+                <option value="Bolsa de Trabajo" selected="">
+                  Bolsa de Trabajo
+                </option>
+                <option value="Internship">Internship</option>
+                <option value="Pruebas">Pruebas</option>
+                <option value="Duplicado">Duplicado</option>
+              </select>
+            </td>
+          </tr>
+          <tr class="grid mb-2">
+            <td>
+              <label class="font-medium pl-2 text-textGray">Curriculum *</label>
+            </td>
+            <td>
+              <input
+                type="file"
+                name="file_12_1"
+                required="required"
+                class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script
+        src="https://www.google.com/recaptcha/api.js?hl=es"
+        async
+        defer
+      ></script>
+      <div
+        class="g-recaptcha"
+        data-sitekey="6LfXMKsZAAAAACGRuPAKqie7am6XkoKq0-tZz-aJ"
+      ></div>
+      <input
+        type="hidden"
+        id="captchaUrl"
+        value="https://microsipmtz.mantic360.net/modules/Settings/Webforms/actions/CheckCaptcha.php"
+      /><input
+        type="hidden"
+        name="recaptcha_validation_value"
+        id="recaptcha_validation_value"
+        value="false"
+      /><input
+        type="submit"
+        value="Enviar"
+        class="bg-orange hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-lg mt-2 w-full appearance-none cursor-pointer hover:shadow-md transition-all duration-300"
+      />
+    </form>
+    <script type="text/javascript">
+      var _form_active = "";
+      window.onload = function () {
+        var N = navigator.appName,
+          ua = navigator.userAgent,
+          tem;
+        var M = ua.match(
+          /(opera|chrome|safari|firefox|msie)\/?\s*(\.?\d+(\.\d+)*)/i
+        );
+        if (M && (tem = ua.match(/version\/([\.\d]+)/i)) != null) M[2] = tem[1];
+        M = M ? [M[1], M[2]] : [N, navigator.appVersion, "-?"];
+        var browserName = M[0];
+        var _forms = document.getElementsByClassName("__vtigerWebForm");
+        for (var i = 0; i < _forms.length; i++) {
+          var form = _forms[i];
+          let inputs = form.elements;
+          form.onsubmit = function () {
+            let _formid = "#" + this.id;
+            let _formidname = this.id;
+            _form_active = this.id;
+            var required = [],
+              att,
+              val;
+            for (var i = 0; i < inputs.length; i++) {
+              att = inputs[i].getAttribute("required");
+              val = inputs[i].value;
+              type = inputs[i].type;
+              if (type == "email") {
+                if (val != "") {
+                  var elemLabel = inputs[i].getAttribute("label");
+                  var emailFilter =
+                    /^[_/a-zA-Z0-9]+([!"#$%&()*+,./:;<=>?\^_`{|}~-]?[a-zA-Z0-9/_/-])*@[a-zA-Z0-9]+([\_\-\.]?[a-zA-Z0-9]+)*\.([\-\_]?[a-zA-Z0-9])+(\.?[a-zA-Z0-9]+)?$/;
+                  var illegalChars = /[\(\)\<\>\,\;\:\"\[\]]/;
+                  if (!emailFilter.test(val)) {
+                    alert(
+                      "For " +
+                        elemLabel +
+                        " field please enter valid email address"
+                    );
+                    return false;
+                  } else if (val.match(illegalChars)) {
+                    alert(elemLabel + " field contains illegal characters");
+                    return false;
+                  }
+                }
+              }
+              if (att != null) {
+                if (val.replace(/^\s+|\s+$/g, "") == "") {
+                  required.push(inputs[i].getAttribute("label"));
+                }
+              }
+            }
+            if (required.length > 0) {
+              alert("The following fields are required: " + required.join());
+              return false;
+            }
+            var numberTypeInputs =
+              document.querySelectorAll("input[type=number]");
+            for (var i = 0; i < numberTypeInputs.length; i++) {
+              val = numberTypeInputs[i].value;
+              var elemLabel = numberTypeInputs[i].getAttribute("label");
+              var elemDataType = numberTypeInputs[i].getAttribute("datatype");
+              if (val != "") {
+                if (elemDataType == "double") {
+                  var numRegex = /^[+-]?\d+(\.\d+)?$/;
+                } else {
+                  var numRegex = /^[+-]?\d+$/;
+                }
+                if (!numRegex.test(val)) {
+                  alert(
+                    "For " + elemLabel + " field please enter valid number"
+                  );
+                  return false;
+                }
+              }
+            }
+            var dateTypeInputs = document.querySelectorAll("input[type=date]");
+            for (var i = 0; i < dateTypeInputs.length; i++) {
+              dateVal = dateTypeInputs[i].value;
+              var elemLabel = dateTypeInputs[i].getAttribute("label");
+              if (dateVal != "") {
+                var dateRegex =
+                  /^[1-9][0-9]{3}-(0[1-9]|1[0-2]|[1-9]{1})-(0[1-9]|[1-2][0-9]|3[0-1]|[1-9]{1})$/;
+                if (!dateRegex.test(dateVal)) {
+                  alert(
+                    "For " +
+                      elemLabel +
+                      " field please enter valid date in required format"
+                  );
+                  return false;
+                }
+              }
+            }
+            var inputElems = document.getElementsByTagName("input");
+            var totalFileSize = 0;
+            for (var i = 0; i < inputElems.length; i++) {
+              if (inputElems[i].type.toLowerCase() === "file") {
+                var file = inputElems[i].files[0];
+                if (typeof file !== "undefined") {
+                  var totalFileSize = totalFileSize + file.size;
+                }
+              }
+            }
+            if (totalFileSize > 52428800) {
+              alert("Maximum allowed file size including all files is 50MB.");
+              return false;
+            }
+            var getStatus = false;
+            var recaptchaValidationValue = document.querySelector(
+              _formid + " .g-recaptcha .g-recaptcha-response"
+            ).value;
+            var captchaUrl = document.querySelector(
+              _formid + " #captchaUrl"
+            ).value;
+            var url =
+              captchaUrl +
+              "?form=" +
+              _formidname +
+              "&recaptcha_response=" +
+              recaptchaValidationValue;
+            url = url + "&callback=JSONPCallback";
+            jsonp.fetch(url);
+            if (getStatus == false) {
+              return false;
+            }
+          };
+        }
+      };
+      var jsonp = {
+        callbackCounter: 0,
+        fetch: function (url) {
+          url = url + "&callId=" + this.callbackCounter;
+          var scriptTag = document.createElement("SCRIPT");
+          scriptTag.src = url;
+          scriptTag.async = true;
+          scriptTag.id = "JSONPCallback_" + this.callbackCounter;
+          scriptTag.type = "text/javascript";
+          document.getElementsByTagName("HEAD")[0].appendChild(scriptTag);
+          this.callbackCounter++;
         },
+      };
+      function JSONPCallback(data) {
+        if (data.result.success == true) {
+          document.querySelector(
+            "#" + _form_active + " #recaptcha_validation_value"
+          ).value = true;
+          var form = document.getElementById(_form_active);
+          form.submit();
+        } else {
+          document.querySelector(
+            "#" + _form_active + " #recaptcha_validation_value"
+          ).value = false;
+          alert("Bot detectado");
+        }
+        var element = document.getElementById(
+          "JSONPCallback_" + data.result.callId
+        );
+        element.parentNode.removeChild(element);
       }
-    }
-  </script>
-</head>
-<body>
-  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-  <form id="__vtigerWebForm171829099bbffa9fcc55b1481bf49db5" class="__vtigerWebForm" name="Bolsa de trabajo"
-    action="https://microsipmtz.mantic360.net/modules/Webforms/capture.php" method="post" accept-charset="utf-8"
-    enctype="multipart/form-data"><input type="hidden" name="__vtrftk"
-      value="sid:a87f91640478c4e56d12558ab8b7d41d2762434e,1732229663"><input type="hidden" name="publicid"
-      value="171829099bbffa9fcc55b1481bf49db5"><input type="hidden" name="urlencodeenable" value="1"><input type="hidden"
-      name="name" value="Bolsa de trabajo">
-    <table class="w-full font-sora">
-      <tbody>
-        <tr class="grid mb-2">
-          <td><label class="font-medium pl-2 text-textGray">Nombres*</label></td>
-          <td><input type="text" name="firstname" data-label="" value="" required="" class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"></td>
-        </tr>
-        <tr class="grid mb-2">
-          <td><label class="font-medium pl-2 text-textGray">Apellidos*</label></td>
-          <td><input type="text" name="lastname" data-label="" value="" required="" class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"></td>
-        </tr>
-        <tr class="grid mb-2">
-          <td><label class="font-medium pl-2 text-textGray">E-mail*</label></td>
-          <td><input type="email" name="email" data-label="" value="" required="" class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"></td>
-        </tr>
-        <tr class="grid mb-2">
-          <td><label class="font-medium pl-2 text-textGray">Teléfono móvil*</label></td>
-          <td><input type="tel" name="mobile" data-label="" value="" required="" class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"></td>
-        </tr>
-        <tr class="grid mb-2">
-          <td><label class="font-medium pl-2 text-textGray">Estado*</label></td>
-          <td><select name="cf_1448" data-label="label:Estado" required="" class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 appearance-none cursor-pointer">
-              <option value="">Seleccionar valor</option>
-              <option value="Aguascalientes">Aguascalientes</option>
-              <option value="Baja California">Baja California</option>
-              <option value="Baja California Sur">Baja California Sur</option>
-              <option value="Campeche">Campeche</option>
-              <option value="Coahuila">Coahuila</option>
-              <option value="Colima">Colima</option>
-              <option value="Chiapas">Chiapas</option>
-              <option value="Chihuahua">Chihuahua</option>
-              <option value="CDMX">CDMX</option>
-              <option value="Durango">Durango</option>
-              <option value="Guanajuato">Guanajuato</option>
-              <option value="Guerrero">Guerrero</option>
-              <option value="Hidalgo">Hidalgo</option>
-              <option value="Jalisco">Jalisco</option>
-              <option value="Edo. de México">Edo. de México</option>
-              <option value="Michoacan">Michoacan</option>
-              <option value="Morelos">Morelos</option>
-              <option value="Nayarit">Nayarit</option>
-              <option value="Nuevo León">Nuevo León</option>
-              <option value="Oaxaca">Oaxaca</option>
-              <option value="Puebla">Puebla</option>
-              <option value="Querétaro">Querétaro</option>
-              <option value="Quintana Roo">Quintana Roo</option>
-              <option value="San Luis Potosí">San Luis Potosí</option>
-              <option value="Sinaloa">Sinaloa</option>
-              <option value="Sonora">Sonora</option>
-              <option value="Tabasco">Tabasco</option>
-              <option value="Tamaulipas">Tamaulipas</option>
-              <option value="Tlaxcala">Tlaxcala</option>
-              <option value="Veracruz">Veracruz</option>
-              <option value="Yucatán">Yucatán</option>
-              <option value="Zacatecas">Zacatecas</option>
-            </select></td>
-        </tr>
-        <tr class="grid mb-2">
-          <td><label class="font-medium pl-2 text-textGray">Ciudad o Municipio*</label></td>
-          <td><input type="text" name="cf_1450" data-label="" value="" required="" class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"></td>
-        </tr>
-        <tr class="grid mb-2">
-          <td><label class="font-medium pl-2 text-textGray">Escolaridad*</label></td>
-          <td><input type="text" name="cf_1458" data-label="" value="" required="" class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"></td>
-        </tr>
-        <tr class="grid mb-2">
-          <td><label class="font-medium pl-2 text-textGray">Vacantes*</label></td>
-          <td><select name="cf_1456" data-label="label:Vacantes" required="" class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 appearance-none cursor-pointer">
-              <option value="">Seleccionar vacante</option>
-              <option value="Aliado en Soporte Técnico">Aliado en Soporte Técnico</option>
-              <option value="Desarrollador de Software Junior">Desarrollador de Software Junior</option>
-            </select></td>
-        </tr>
-        <tr class="flex items-center justify-between mb-2">
-          <td><label for="recibir-correos" class="pl-2 font-medium text-textGray">Recibir correos de Microsip</label></td>
-          <td><input type="hidden" name="cf_1454" data-label="" value="0"><input type="checkbox" name="cf_1454"
-              data-label="" value="1" class="bg-inputGray text-gray-900 text-sm rounded-lg focus:ring-orange focus:border-orange block h-5 w-5 p-2.5 appearance-none checked:bg-orange" id="recibir-correos"></td>
-        </tr>
-        <tr>
-          <td><select name="cf_1460" data-label="label:Procedencia" hidden="">
-              <option value="">Seleccionar valor</option>
-              <option value="Bolsa de Trabajo" selected="">Bolsa de Trabajo</option>
-              <option value="Internship">Internship</option>
-              <option value="Pruebas">Pruebas</option>
-              <option value="Duplicado">Duplicado</option>
-            </select></td>
-        </tr>
-        <tr class="grid mb-2">
-          <td><label class="font-medium pl-2 text-textGray">Curriculum *</label></td>
-          <td><input type="file" name="file_12_1" required="required" class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"></td>
-        </tr>
-      </tbody>
-    </table>
-    <script src="https://www.google.com/recaptcha/api.js?hl=es" async defer></script>
-    <div class="g-recaptcha" data-sitekey="6LfXMKsZAAAAACGRuPAKqie7am6XkoKq0-tZz-aJ"></div><input type="hidden"
-      id="captchaUrl" value="https://microsipmtz.mantic360.net/modules/Settings/Webforms/actions/CheckCaptcha.php"><input
-      type="hidden" name="recaptcha_validation_value" id="recaptcha_validation_value" value="false"><input type="submit"
-      value="Enviar" class="bg-orange hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-lg mt-2 w-full appearance-none cursor-pointer hover:shadow-md transition-all duration-300">
-  </form>
-  <script
-    type="text/javascript">var _form_active = ""; window.onload = function () { var N = navigator.appName, ua = navigator.userAgent, tem; var M = ua.match(/(opera|chrome|safari|firefox|msie)\/?\s*(\.?\d+(\.\d+)*)/i); if (M && (tem = ua.match(/version\/([\.\d]+)/i)) != null) M[2] = tem[1]; M = M ? [M[1], M[2]] : [N, navigator.appVersion, "-?"]; var browserName = M[0]; var _forms = document.getElementsByClassName("__vtigerWebForm"); for (var i = 0; i < _forms.length; i++) { var form = _forms[i]; let inputs = form.elements; form.onsubmit = function () { let _formid = "#" + this.id; let _formidname = this.id; _form_active = this.id; var required = [], att, val; for (var i = 0; i < inputs.length; i++) { att = inputs[i].getAttribute("required"); val = inputs[i].value; type = inputs[i].type; if (type == "email") { if (val != "") { var elemLabel = inputs[i].getAttribute("label"); var emailFilter = /^[_/a-zA-Z0-9]+([!"#$%&()*+,./:;<=>?\^_`{|}~-]?[a-zA-Z0-9/_/-])*@[a-zA-Z0-9]+([\_\-\.]?[a-zA-Z0-9]+)*\.([\-\_]?[a-zA-Z0-9])+(\.?[a-zA-Z0-9]+)?$/; var illegalChars = /[\(\)\<\>\,\;\:\"\[\]]/; if (!emailFilter.test(val)) { alert("For " + elemLabel + " field please enter valid email address"); return false; } else if (val.match(illegalChars)) { alert(elemLabel + " field contains illegal characters"); return false; } } } if (att != null) { if (val.replace(/^\s+|\s+$/g, "") == "") { required.push(inputs[i].getAttribute("label")); } } } if (required.length > 0) { alert("The following fields are required: " + required.join()); return false; } var numberTypeInputs = document.querySelectorAll("input[type=number]"); for (var i = 0; i < numberTypeInputs.length; i++) { val = numberTypeInputs[i].value; var elemLabel = numberTypeInputs[i].getAttribute("label"); var elemDataType = numberTypeInputs[i].getAttribute("datatype"); if (val != "") { if (elemDataType == "double") { var numRegex = /^[+-]?\d+(\.\d+)?$/; } else { var numRegex = /^[+-]?\d+$/; } if (!numRegex.test(val)) { alert("For " + elemLabel + " field please enter valid number"); return false; } } } var dateTypeInputs = document.querySelectorAll("input[type=date]"); for (var i = 0; i < dateTypeInputs.length; i++) { dateVal = dateTypeInputs[i].value; var elemLabel = dateTypeInputs[i].getAttribute("label"); if (dateVal != "") { var dateRegex = /^[1-9][0-9]{3}-(0[1-9]|1[0-2]|[1-9]{1})-(0[1-9]|[1-2][0-9]|3[0-1]|[1-9]{1})$/; if (!dateRegex.test(dateVal)) { alert("For " + elemLabel + " field please enter valid date in required format"); return false; } } } var inputElems = document.getElementsByTagName("input"); var totalFileSize = 0; for (var i = 0; i < inputElems.length; i++) { if (inputElems[i].type.toLowerCase() === "file") { var file = inputElems[i].files[0]; if (typeof file !== "undefined") { var totalFileSize = totalFileSize + file.size; } } } if (totalFileSize > 52428800) { alert("Maximum allowed file size including all files is 50MB."); return false; } var getStatus = false; var recaptchaValidationValue = document.querySelector(_formid + " .g-recaptcha .g-recaptcha-response").value; var captchaUrl = document.querySelector(_formid + " #captchaUrl").value; var url = captchaUrl + "?form=" + _formidname + "&recaptcha_response=" + recaptchaValidationValue; url = url + "&callback=JSONPCallback"; jsonp.fetch(url); if (getStatus == false) { return false; } }; }; }; var jsonp = { callbackCounter: 0, fetch: function (url) { url = url + "&callId=" + this.callbackCounter; var scriptTag = document.createElement("SCRIPT"); scriptTag.src = url; scriptTag.async = true; scriptTag.id = "JSONPCallback_" + this.callbackCounter; scriptTag.type = "text/javascript"; document.getElementsByTagName("HEAD")[0].appendChild(scriptTag); this.callbackCounter++; } }; function JSONPCallback(data) { if (data.result.success == true) { document.querySelector("#" + _form_active + " #recaptcha_validation_value").value = true; var form = document.getElementById(_form_active); form.submit(); } else { document.querySelector("#" + _form_active + " #recaptcha_validation_value").value = false; alert("Bot detectado"); } var element = document.getElementById("JSONPCallback_" + data.result.callId); element.parentNode.removeChild(element); }</script>
-</body>
+    </script>
+  </body>
 </html>
