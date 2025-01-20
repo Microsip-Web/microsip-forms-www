@@ -45,7 +45,7 @@
       <input
         type="hidden"
         name="__vtrftk"
-        value="sid:60802f93019b5373503c43a9f65618c7e7571753,1730402909"
+        value="sid:09a2a9f048a8226dbf479c498192555a73124d84,1737409522"
       /><input
         type="hidden"
         name="publicid"
@@ -59,7 +59,7 @@
         <tbody>
           <tr class="grid mb-2">
             <td>
-              <label class="font-medium pl-2 text-textGray">Mensaje*</label>
+              <label class="font-medium pl-2 text-textGray">¿En qué te podemos ayudar?*</label>
             </td>
             <td>
               <textarea
@@ -195,6 +195,21 @@
               />
             </td>
           </tr>
+          <tr class="grid mb-2">
+            <td>
+              <label class="pl-2 font-medium text-textGray">¿Qué software usas?*</label>
+            </td>
+            <td>
+              <input 
+                type="text" 
+                name="cf_1394" 
+                data-label="" 
+                value="" 
+                required=""
+                placeholder="Ej: CONTPAQi, Aspel, Siigo, etc."
+                class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" />
+            </td>
+          </tr>
           <tr class="flex items-center justify-between mb-2">
             <td>
               <label for="soy-usuario" class="pl-2 font-medium text-textGray"
@@ -244,11 +259,12 @@
           </tr>
           <tr>
             <td>
+              <!-- Hook for the CRM tracking -->
               <input
                 type="hidden"
                 name="cf_1317"
                 data-label=""
-                value="https://www.microsip.com/contacta-a-un-partner"
+                value=""
               />
             </td>
           </tr>
@@ -505,6 +521,14 @@
         );
         element.parentNode.removeChild(element);
       }
+    </script>
+
+    <!-- script to insert the URL to the hook input for the CRM -->
+    <script>
+      // wait until the page is loaded
+      window.onload = function () {
+        document.getElementById("cf_1317").value = window.location.href;
+      };
     </script>
   </body>
 </html>
