@@ -261,10 +261,11 @@
             <td>
               <!-- Hook for the CRM tracking -->
               <input
+                id="hook"
                 type="hidden"
                 name="cf_1317"
                 data-label=""
-                value=""
+                value="https://www.microsip.com/your-page"
               />
             </td>
           </tr>
@@ -521,14 +522,6 @@
         );
         element.parentNode.removeChild(element);
       }
-    </script>
-
-    <!-- script to insert the URL to the hook input for the CRM -->
-    <script>
-      // wait until the page is loaded
-      window.onload = function () {
-        document.getElementById("cf_1317").value = window.location.href;
-      };
     </script>
   </body>
 </html>
