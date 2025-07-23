@@ -22,7 +22,7 @@
             inputGray: "#FAFAFA",
             enabledBorder: "rgba(0, 0, 0, 0.23)",
             secondary: "rgba(0, 0, 0, 0.60)",
-            formBg: "#FAFAFA"
+            formBg: "#FAFAFA",
           },
         },
         fontFamily: {
@@ -67,11 +67,11 @@
               <input
                 type="text"
                 name="firstname"
-                data-label=""
+                data-label="Nombres"
                 value=""
                 required=""
                 placeholder="Nombres*"
-                class="bg-transparent border border-enabledBorder placeholder:text-secondary  text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                class="bg-transparent border border-enabledBorder placeholder:text-secondary text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
               />
             </td>
           </tr>
@@ -85,7 +85,7 @@
               <input
                 type="text"
                 name="lastname"
-                data-label=""
+                data-label="Apellidos"
                 value=""
                 required=""
                 placeholder="Apellidos*"
@@ -103,7 +103,7 @@
               <input
                 type="email"
                 name="email"
-                data-label=""
+                data-label="E-mail"
                 required=""
                 value=""
                 placeholder="E-mail*"
@@ -121,8 +121,9 @@
               <input
                 type="text"
                 name="cf_1129"
-                data-label=""
+                data-label="Tel o Cel"
                 value=""
+                required=""
                 placeholder="Tel o Cel*"
                 class="bg-transparent border border-enabledBorder placeholder:text-secondary text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
               />
@@ -178,8 +179,22 @@
             </td>
           </tr>
           <tr class="grid mb-4">
-            <td><label class="font-medium pl-2 text-textGray hidden">Otro Software</label></td>
-            <td><input class="bg-transparent border border-enabledBorder placeholder:text-secondary text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="¿Qué software utilizas?" type="text" name="cf_1394" data-label="" value="" /></td>
+            <td>
+              <label class="font-medium pl-2 text-textGray hidden"
+                >Otro Software</label
+              >
+            </td>
+            <td>
+              <input
+                class="bg-transparent border border-enabledBorder placeholder:text-secondary text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                placeholder="¿Qué software utilizas?"
+                type="text"
+                name="cf_1394"
+                data-label="Otro Software"
+                value=""
+                required=""
+              />
+            </td>
           </tr>
           <tr>
             <td>
