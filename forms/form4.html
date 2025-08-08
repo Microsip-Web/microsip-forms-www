@@ -8,23 +8,167 @@
       href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              orange: "#ff8623",
-              textGray: "#717e8a",
-              inputGray: "#e9eaed",
-            },
-          },
-          fontFamily: {
-            sora: ["Sora", "sans-serif"],
-          },
-        },
-      };
-    </script>
+    <style>
+      /* Form4 Scoped CSS Styles */
+
+      /* Apply box-sizing to all form elements to prevent overflow */
+      .form4-container,
+      .form4-container *,
+      .form4-input,
+      .form4-textarea,
+      .form4-select,
+      .form4-checkbox,
+      .form4-submit {
+        box-sizing: border-box;
+      }
+
+      .form4-container {
+        width: 100%;
+        max-width: 100%;
+        font-family: "Sora", sans-serif;
+        overflow-x: hidden;
+      }
+
+      .form4-row {
+        display: grid;
+        margin-bottom: 0.5rem;
+        width: 100%;
+      }
+
+      .form4-row-flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+        width: 100%;
+      }
+
+      .form4-label {
+        font-weight: 500;
+        padding-left: 0.5rem;
+        color: #717e8a;
+      }
+
+      .form4-input {
+        background-color: #e9eaed;
+        color: #111827;
+        font-size: 0.875rem;
+        border-radius: 0.75rem;
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        padding: 0.625rem;
+        border: 2px solid transparent;
+        outline: none;
+        transition: all 0.15s ease-in-out;
+        box-sizing: border-box;
+      }
+
+      .form4-input:focus {
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+      }
+
+      .form4-textarea {
+        background-color: #e9eaed;
+        color: #111827;
+        font-size: 0.875rem;
+        border-radius: 0.75rem;
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        padding: 0.625rem;
+        resize: none;
+        height: 6rem;
+        min-height: 6rem;
+        max-height: 6rem;
+        border: 2px solid transparent;
+        outline: none;
+        transition: all 0.15s ease-in-out;
+        box-sizing: border-box;
+      }
+
+      .form4-textarea:focus {
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+      }
+
+      .form4-select {
+        background-color: #e9eaed;
+        color: #111827;
+        font-size: 0.875rem;
+        border-radius: 0.75rem;
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        padding: 0.625rem;
+        appearance: none;
+        cursor: pointer;
+        border: 2px solid transparent;
+        outline: none;
+        transition: all 0.15s ease-in-out;
+        box-sizing: border-box;
+      }
+
+      .form4-select:focus {
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+      }
+
+      .form4-checkbox {
+        background-color: #e9eaed;
+        color: #111827;
+        font-size: 0.875rem;
+        border-radius: 0.5rem;
+        display: block;
+        height: 1.25rem;
+        width: 1.25rem;
+        appearance: none;
+        border: 2px solid transparent;
+        outline: none;
+        cursor: pointer;
+        transition: all 0.15s ease-in-out;
+        box-sizing: border-box;
+        flex-shrink: 0;
+      }
+
+      .form4-checkbox:focus {
+        border-color: #ff8623;
+        box-shadow: 0 0 0 3px rgba(255, 134, 35, 0.1);
+      }
+
+      .form4-checkbox:checked {
+        background-color: #ff8623;
+      }
+
+      .form4-submit {
+        background-color: #ff8623;
+        color: white;
+        font-weight: bold;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        margin-top: 0.5rem;
+        width: 100%;
+        max-width: 100%;
+        appearance: none;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        transition: all 0.3s ease;
+        box-sizing: border-box;
+      }
+
+      .form4-submit:hover {
+        background-color: #e5751f;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
+
+      /*
+       * All styles above are scoped with form4- prefix to ensure they only apply
+       * to this specific form and don't affect other parts of the website
+       */
+    </style>
   </head>
   <body>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
@@ -50,11 +194,11 @@
         name="name"
         value="Internship"
       />
-      <table class="w-full font-sora">
+      <table class="form4-container">
         <tbody>
-          <tr class="grid mb-2">
+          <tr class="form4-row">
             <td>
-              <label class="font-medium pl-2 text-textGray">Nombres*</label>
+              <label class="form4-label">Nombres*</label>
             </td>
             <td>
               <input
@@ -63,13 +207,13 @@
                 data-label=""
                 value=""
                 required=""
-                class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                class="form4-input"
               />
             </td>
           </tr>
-          <tr class="grid mb-2">
+          <tr class="form4-row">
             <td>
-              <label class="font-medium pl-2 text-textGray">Apellidos*</label>
+              <label class="form4-label">Apellidos*</label>
             </td>
             <td>
               <input
@@ -78,13 +222,13 @@
                 data-label=""
                 value=""
                 required=""
-                class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                class="form4-input"
               />
             </td>
           </tr>
-          <tr class="grid mb-2">
+          <tr class="form4-row">
             <td>
-              <label class="font-medium pl-2 text-textGray">E-mail*</label>
+              <label class="form4-label">E-mail*</label>
             </td>
             <td>
               <input
@@ -93,15 +237,13 @@
                 data-label=""
                 value=""
                 required=""
-                class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                class="form4-input"
               />
             </td>
           </tr>
-          <tr class="grid mb-2">
+          <tr class="form4-row">
             <td>
-              <label class="font-medium pl-2 text-textGray"
-                >Teléfono móvil*</label
-              >
+              <label class="form4-label">Teléfono móvil*</label>
             </td>
             <td>
               <input
@@ -112,15 +254,13 @@
                 pattern="[0-9]{10}"
                 title="Por favor ingrese un número telefónico válido de 10 dígitos"
                 required=""
-                class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                class="form4-input"
               />
             </td>
           </tr>
-          <tr class="grid mb-2">
+          <tr class="form4-row">
             <td>
-              <label class="font-medium pl-2 text-textGray"
-                >Ciudad o Municipio*</label
-              >
+              <label class="form4-label">Ciudad o Municipio*</label>
             </td>
             <td>
               <input
@@ -129,20 +269,20 @@
                 data-label=""
                 value=""
                 required=""
-                class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                class="form4-input"
               />
             </td>
           </tr>
-          <tr class="grid mb-2">
+          <tr class="form4-row">
             <td>
-              <label class="font-medium pl-2 text-textGray">Estado*</label>
+              <label class="form4-label">Estado*</label>
             </td>
             <td>
               <select
                 name="cf_1448"
                 data-label="label:Estado"
                 required=""
-                class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 appearance-none cursor-pointer"
+                class="form4-select"
               >
                 <option value="">Seleccione un estado</option>
                 <option value="Aguascalientes">Aguascalientes</option>
@@ -180,9 +320,9 @@
               </select>
             </td>
           </tr>
-          <tr class="grid mb-2">
+          <tr class="form4-row">
             <td>
-              <label class="font-medium pl-2 text-textGray">Carrera*</label>
+              <label class="form4-label">Carrera*</label>
             </td>
             <td>
               <input
@@ -191,20 +331,20 @@
                 data-label=""
                 value=""
                 required=""
-                class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                class="form4-input"
               />
             </td>
           </tr>
-          <tr class="grid mb-2">
+          <tr class="form4-row">
             <td>
-              <label class="font-medium pl-2 text-textGray">Semestre*</label>
+              <label class="form4-label">Semestre*</label>
             </td>
             <td>
               <select
                 name="cf_1474"
                 data-label="label:Semestre"
                 required=""
-                class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 appearance-none cursor-pointer"
+                class="form4-select"
               >
                 <option value="">Seleccionar valor</option>
                 <option value="1">1</option>
@@ -223,9 +363,9 @@
               </select>
             </td>
           </tr>
-          <tr class="grid mb-2">
+          <tr class="form4-row">
             <td>
-              <label class="font-medium pl-2 text-textGray">Universidad*</label>
+              <label class="form4-label">Universidad*</label>
             </td>
             <td>
               <input
@@ -234,13 +374,13 @@
                 data-label=""
                 value=""
                 required=""
-                class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                class="form4-input"
               />
             </td>
           </tr>
-          <tr class="grid mb-2">
-            <td class="pl-2">
-              <label class="font-medium text-textGray"
+          <tr class="form4-row">
+            <td>
+              <label class="form4-label"
                 >¿Como tus habilidades y fortalezas pueden aportar al
                 crecimiento de Microsip?*</label
               >
@@ -249,15 +389,13 @@
               <textarea
                 name="cf_1468"
                 required=""
-                class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 resize-none h-24 min-h-24 max-h-24"
+                class="form4-textarea"
               ></textarea>
             </td>
           </tr>
-          <tr class="flex items-center justify-between mb-2">
+          <tr class="form4-row-flex">
             <td>
-              <label
-                for="recibir-correos"
-                class="font-medium pl-2 text-textGray"
+              <label for="recibir-correos" class="form4-label"
                 >Recibir correos de Microsip</label
               >
             </td>
@@ -272,7 +410,7 @@
                 name="cf_1454"
                 data-label=""
                 value="1"
-                class="bg-inputGray text-gray-900 text-sm rounded-lg focus:ring-orange focus:border-orange block h-5 w-5 p-2.5 appearance-none checked:bg-orange"
+                class="form4-checkbox"
                 id="recibir-correos"
               />
             </td>
@@ -288,16 +426,16 @@
               </select>
             </td>
           </tr>
-          <tr class="grid mb-2">
+          <tr class="form4-row">
             <td>
-              <label class="font-medium pl-2 text-textGray">Curriculum *</label>
+              <label class="form4-label">Curriculum *</label>
             </td>
             <td>
               <input
                 type="file"
                 name="file_17_1"
                 required="required"
-                class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                class="form4-input"
               />
             </td>
           </tr>
@@ -321,11 +459,7 @@
         name="recaptcha_validation_value"
         id="recaptcha_validation_value"
         value="false"
-      /><input
-        type="submit"
-        value="Enviar"
-        class="bg-orange hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-lg mt-2 w-full appearance-none cursor-pointer hover:shadow-md transition-all duration-300"
-      />
+      /><input type="submit" value="Enviar" class="form4-submit" />
     </form>
     <script type="text/javascript">
       var _form_active = "";

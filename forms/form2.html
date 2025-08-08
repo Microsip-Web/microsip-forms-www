@@ -10,23 +10,167 @@
       href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              orange: "#ff8623",
-              textGray: "#717e8a",
-              inputGray: "#e9eaed",
-            },
-          },
-          fontFamily: {
-            sora: ["Sora", "sans-serif"],
-          },
-        },
-      };
-    </script>
+    <style>
+      /* Form2 Scoped CSS Styles */
+
+      /* Apply box-sizing to all form elements to prevent overflow */
+      .form2-container,
+      .form2-container *,
+      .form2-input,
+      .form2-textarea,
+      .form2-select,
+      .form2-checkbox,
+      .form2-submit {
+        box-sizing: border-box;
+      }
+
+      .form2-container {
+        width: 100%;
+        max-width: 100%;
+        font-family: "Sora", sans-serif;
+        overflow-x: hidden;
+      }
+
+      .form2-row {
+        display: grid;
+        margin-bottom: 0.5rem;
+        width: 100%;
+      }
+
+      .form2-row-flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+        width: 100%;
+      }
+
+      .form2-label {
+        font-weight: 500;
+        padding-left: 0.5rem;
+        color: #717e8a;
+      }
+
+      .form2-input {
+        background-color: #e9eaed;
+        color: #111827;
+        font-size: 0.875rem;
+        border-radius: 0.75rem;
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        padding: 0.625rem;
+        border: 2px solid transparent;
+        outline: none;
+        transition: all 0.15s ease-in-out;
+        box-sizing: border-box;
+      }
+
+      .form2-input:focus {
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+      }
+
+      .form2-textarea {
+        background-color: #e9eaed;
+        color: #111827;
+        font-size: 0.875rem;
+        border-radius: 0.75rem;
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        padding: 0.625rem;
+        resize: none;
+        height: 6rem;
+        min-height: 6rem;
+        max-height: 6rem;
+        border: 2px solid transparent;
+        outline: none;
+        transition: all 0.15s ease-in-out;
+        box-sizing: border-box;
+      }
+
+      .form2-textarea:focus {
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+      }
+
+      .form2-select {
+        background-color: #e9eaed;
+        color: #111827;
+        font-size: 0.875rem;
+        border-radius: 0.75rem;
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        padding: 0.625rem;
+        appearance: none;
+        cursor: pointer;
+        border: 2px solid transparent;
+        outline: none;
+        transition: all 0.15s ease-in-out;
+        box-sizing: border-box;
+      }
+
+      .form2-select:focus {
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+      }
+
+      .form2-checkbox {
+        background-color: #e9eaed;
+        color: #111827;
+        font-size: 0.875rem;
+        border-radius: 0.5rem;
+        display: block;
+        height: 1.25rem;
+        width: 1.25rem;
+        appearance: none;
+        border: 2px solid transparent;
+        outline: none;
+        cursor: pointer;
+        transition: all 0.15s ease-in-out;
+        box-sizing: border-box;
+        flex-shrink: 0;
+      }
+
+      .form2-checkbox:focus {
+        border-color: #ff8623;
+        box-shadow: 0 0 0 3px rgba(255, 134, 35, 0.1);
+      }
+
+      .form2-checkbox:checked {
+        background-color: #ff8623;
+      }
+
+      .form2-submit {
+        background-color: #ff8623;
+        color: white;
+        font-weight: bold;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        margin-top: 0.5rem;
+        width: 100%;
+        max-width: 100%;
+        appearance: none;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        transition: all 0.3s ease;
+        box-sizing: border-box;
+      }
+
+      .form2-submit:hover {
+        background-color: #e5751f;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
+
+      /*
+       * All styles above are scoped with form2- prefix to ensure they only apply
+       * to this specific form and don't affect other parts of the website
+       */
+    </style>
   </head>
   <body>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
@@ -52,11 +196,11 @@
         name="name"
         value="Prospectos Partner WWW"
       />
-      <table class="w-full font-sora">
+      <table class="form2-container">
         <tbody>
-          <tr class="grid mb-2">
+          <tr class="form2-row">
             <td>
-              <label class="font-medium pl-2 text-textGray">Nombres*</label>
+              <label class="form2-label">Nombres*</label>
             </td>
             <td>
               <input
@@ -65,13 +209,13 @@
                 data-label=""
                 value=""
                 required=""
-                class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                class="form2-input"
               />
             </td>
           </tr>
-          <tr class="grid mb-2">
+          <tr class="form2-row">
             <td>
-              <label class="font-medium pl-2 text-textGray">Apellidos*</label>
+              <label class="form2-label">Apellidos*</label>
             </td>
             <td>
               <input
@@ -80,13 +224,13 @@
                 data-label=""
                 value=""
                 required=""
-                class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                class="form2-input"
               />
             </td>
           </tr>
-          <tr class="grid mb-2">
+          <tr class="form2-row">
             <td>
-              <label class="font-medium pl-2 text-textGray">Tel o Cel*</label>
+              <label class="form2-label">Tel o Cel*</label>
             </td>
             <td>
               <input
@@ -97,13 +241,13 @@
                 pattern="[0-9]{10}"
                 title="Por favor ingrese un número telefónico válido de 10 dígitos"
                 required=""
-                class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                class="form2-input"
               />
             </td>
           </tr>
-          <tr class="grid mb-2">
+          <tr class="form2-row">
             <td>
-              <label class="font-medium pl-2 text-textGray">E-mail*</label>
+              <label class="form2-label">E-mail*</label>
             </td>
             <td>
               <input
@@ -112,13 +256,13 @@
                 data-label=""
                 value=""
                 required=""
-                class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                class="form2-input"
               />
             </td>
           </tr>
-          <tr class="grid mb-2">
+          <tr class="form2-row">
             <td>
-              <label class="font-medium pl-2 text-textGray">Ciudad*</label>
+              <label class="form2-label">Ciudad*</label>
             </td>
             <td>
               <input
@@ -127,15 +271,13 @@
                 data-label=""
                 value=""
                 required=""
-                class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                class="form2-input"
               />
             </td>
           </tr>
-          <tr class="grid mb-2">
+          <tr class="form2-row">
             <td>
-              <label class="font-medium pl-2 text-textGray"
-                >Municipio o Delegación*</label
-              >
+              <label class="form2-label">Municipio o Delegación*</label>
             </td>
             <td>
               <input
@@ -144,20 +286,20 @@
                 data-label=""
                 value=""
                 required=""
-                class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                class="form2-input"
               />
             </td>
           </tr>
-          <tr class="grid mb-2">
+          <tr class="form2-row">
             <td>
-              <label class="font-medium pl-2 text-textGray">Estado*</label>
+              <label class="form2-label">Estado*</label>
             </td>
             <td>
               <select
                 name="cf_1315"
                 data-label="label:Estado+sitio+web"
                 required=""
-                class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 appearance-none cursor-pointer"
+                class="form2-select"
               >
                 <option value="">Seleccione un estado</option>
                 <option value="Aguascalientes">Aguascalientes</option>
@@ -195,9 +337,9 @@
               </select>
             </td>
           </tr>
-          <tr class="grid mb-2">
+          <tr class="form2-row">
             <td>
-              <label class="font-medium pl-2 text-textGray"
+              <label class="form2-label"
                 >¿Por qué te interesa ser Microsip Partner?*</label
               >
             </td>
@@ -205,27 +347,25 @@
               <textarea
                 name="cf_1323"
                 required=""
-                class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 resize-none h-24 min-h-24 max-h-24"
+                class="form2-textarea"
               ></textarea>
             </td>
           </tr>
-          <tr class="grid mb-2">
+          <tr class="form2-row">
             <td>
-              <label class="font-medium pl-2 text-textGray"
-                >¿Cuáles ERP has implementado?*</label
-              >
+              <label class="form2-label">¿Cuáles ERP has implementado?*</label>
             </td>
             <td>
               <textarea
                 name="cf_1490"
                 required=""
-                class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 resize-none h-24 min-h-24 max-h-24"
+                class="form2-textarea"
               ></textarea>
             </td>
           </tr>
-          <tr class="grid mb-2">
+          <tr class="form2-row">
             <td>
-              <label class="font-medium pl-2 text-textGray"
+              <label class="form2-label"
                 >¿Cómo está conformado tu equipo de trabajo?*</label
               >
             </td>
@@ -233,15 +373,13 @@
               <textarea
                 name="cf_1594"
                 required=""
-                class="bg-inputGray text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 resize-none h-24 min-h-24 max-h-24"
+                class="form2-textarea"
               ></textarea>
             </td>
           </tr>
-          <tr class="flex items-center justify-between mb-2">
+          <tr class="form2-row-flex">
             <td>
-              <label
-                for="recibir-correos"
-                class="pl-2 font-medium text-textGray"
+              <label for="recibir-correos" class="form2-label"
                 >Recibir Correos de Microsip</label
               >
             </td>
@@ -256,7 +394,7 @@
                 name="cf_1325"
                 data-label=""
                 value="1"
-                class="bg-inputGray text-gray-900 text-sm rounded-lg focus:ring-orange focus:border-orange block h-5 w-5 p-2.5 appearance-none checked:bg-orange"
+                class="form2-checkbox"
                 id="recibir-correos"
               />
             </td>
@@ -395,11 +533,7 @@
         name="recaptcha_validation_value"
         id="recaptcha_validation_value"
         value="false"
-      /><input
-        type="submit"
-        value="Enviar"
-        class="bg-orange hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-lg mt-2 w-full appearance-none cursor-pointer hover:shadow-md transition-all duration-300"
-      />
+      /><input type="submit" value="Enviar" class="form2-submit" />
     </form>
     <script type="text/javascript">
       var _form_active = "";

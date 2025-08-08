@@ -11,27 +11,173 @@
     href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
     rel="stylesheet"
   />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            orange: "#ff8623",
-            textGray: "#717e8a",
-            inputGray: "#FAFAFA",
-            enabledBorder: "rgba(0, 0, 0, 0.23)",
-            secondary: "rgba(0, 0, 0, 0.60)",
-            formBg: "#FAFAFA",
-          },
-        },
-        fontFamily: {
-          sora: ["Sora", "sans-serif"],
-        },
-      },
-    };
-  </script>
-  <body class="bg-formBg">
+  <style>
+    /* Ventas Scoped CSS Styles */
+
+    /* Apply box-sizing to all form elements to prevent overflow */
+    .ventas-container,
+    .ventas-container *,
+    .ventas-input,
+    .ventas-textarea,
+    .ventas-select,
+    .ventas-checkbox,
+    .ventas-submit {
+      box-sizing: border-box;
+    }
+
+    .ventas-body {
+      background-color: white;
+    }
+
+    .ventas-container {
+      width: 100%;
+      max-width: 100%;
+      font-family: "Sora", sans-serif;
+      overflow-x: hidden;
+    }
+
+    .ventas-row {
+      display: grid;
+      margin-bottom: 0.5rem;
+      width: 100%;
+    }
+
+    .ventas-row-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+      width: 100%;
+    }
+
+    .ventas-label {
+      font-weight: 500;
+      padding-left: 0.5rem;
+      color: #717e8a;
+    }
+
+    .ventas-input {
+      background-color: #e9eaed;
+      color: #111827;
+      font-size: 0.875rem;
+      border-radius: 0.75rem;
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      padding: 0.625rem;
+      border: 2px solid transparent;
+      outline: none;
+      transition: all 0.15s ease-in-out;
+      box-sizing: border-box;
+    }
+
+    .ventas-input:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+
+    .ventas-textarea {
+      background-color: #e9eaed;
+      color: #111827;
+      font-size: 0.875rem;
+      border-radius: 0.75rem;
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      padding: 0.625rem;
+      resize: none;
+      height: 6rem;
+      min-height: 6rem;
+      max-height: 6rem;
+      appearance: none;
+      border: 2px solid transparent;
+      outline: none;
+      transition: all 0.15s ease-in-out;
+      box-sizing: border-box;
+    }
+
+    .ventas-textarea:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+
+    .ventas-select {
+      background-color: #e9eaed;
+      color: #111827;
+      font-size: 0.875rem;
+      border-radius: 0.75rem;
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      padding: 0.625rem;
+      appearance: none;
+      cursor: pointer;
+      border: 2px solid transparent;
+      outline: none;
+      transition: all 0.15s ease-in-out;
+      box-sizing: border-box;
+    }
+
+    .ventas-select:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+
+    .ventas-checkbox {
+      background-color: #e9eaed;
+      color: #111827;
+      font-size: 0.875rem;
+      border-radius: 0.5rem;
+      display: block;
+      height: 1.25rem;
+      width: 1.25rem;
+      appearance: none;
+      border: 2px solid transparent;
+      outline: none;
+      cursor: pointer;
+      transition: all 0.15s ease-in-out;
+      box-sizing: border-box;
+      flex-shrink: 0;
+    }
+
+    .ventas-checkbox:focus {
+      border-color: #ff8623;
+      box-shadow: 0 0 0 3px rgba(255, 134, 35, 0.1);
+    }
+
+    .ventas-checkbox:checked {
+      background-color: #ff8623;
+    }
+
+    .ventas-submit {
+      background-color: #ff8623;
+      color: white;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      margin-top: 0.5rem;
+      width: 100%;
+      max-width: 100%;
+      appearance: none;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      transition: all 0.3s ease;
+      box-sizing: border-box;
+    }
+
+    .ventas-submit:hover {
+      background-color: #e5751f;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    /*
+     * All styles above are scoped with ventas- prefix to ensure they only apply
+     * to this specific form and don't affect other parts of the website
+     */
+  </style>
+  <body class="ventas-body">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <form
       id="__vtigerWebForm25790dad3426eea3ce5de725993dc88c"
@@ -55,13 +201,11 @@
         name="name"
         value="Formulario Campaña Generación 2025"
       />
-      <table class="w-full font-sora">
+      <table class="ventas-container">
         <tbody>
-          <tr class="grid mb-4">
+          <tr class="ventas-row">
             <td>
-              <label class="font-medium pl-2 text-textGray hidden"
-                >Nombres*</label
-              >
+              <label class="ventas-label">Nombres*</label>
             </td>
             <td>
               <input
@@ -70,16 +214,13 @@
                 data-label="Nombres"
                 value=""
                 required=""
-                placeholder="Nombres*"
-                class="bg-transparent border border-enabledBorder placeholder:text-secondary text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                class="ventas-input"
               />
             </td>
           </tr>
-          <tr class="grid mb-4">
+          <tr class="ventas-row">
             <td>
-              <label class="font-medium pl-2 text-textGray hidden"
-                >Apellidos*</label
-              >
+              <label class="ventas-label">Apellidos*</label>
             </td>
             <td>
               <input
@@ -88,16 +229,13 @@
                 data-label="Apellidos"
                 value=""
                 required=""
-                placeholder="Apellidos*"
-                class="bg-transparent border border-enabledBorder placeholder:text-secondary text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                class="ventas-input"
               />
             </td>
           </tr>
-          <tr class="grid mb-4">
+          <tr class="ventas-row">
             <td>
-              <label class="font-medium pl-2 text-textGray hidden"
-                >E-mail*</label
-              >
+              <label class="ventas-label">E-mail*</label>
             </td>
             <td>
               <input
@@ -106,16 +244,13 @@
                 data-label="E-mail"
                 required=""
                 value=""
-                placeholder="E-mail*"
-                class="bg-transparent border border-enabledBorder placeholder:text-secondary text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                class="ventas-input"
               />
             </td>
           </tr>
-          <tr class="grid mb-4">
+          <tr class="ventas-row">
             <td>
-              <label class="font-medium pl-2 text-textGray hidden"
-                >Tel o Cel</label
-              >
+              <label class="ventas-label">Tel o Cel*</label>
             </td>
             <td>
               <input
@@ -124,23 +259,20 @@
                 data-label="Tel o Cel"
                 value=""
                 required=""
-                placeholder="Tel o Cel*"
-                class="bg-transparent border border-enabledBorder placeholder:text-secondary text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                class="ventas-input"
               />
             </td>
           </tr>
-          <tr class="grid mb-4">
+          <tr class="ventas-row">
             <td>
-              <label class="font-medium pl-2 text-textGray hidden"
-                >Estado sitio web*</label
-              >
+              <label class="ventas-label">Estado*</label>
             </td>
             <td>
               <select
                 name="cf_1315"
                 data-label="label:Estado+sitio+web"
                 required=""
-                class="bg-transparent border border-enabledBorder placeholder:text-secondary text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 appearance-none cursor-pointer"
+                class="ventas-select"
               >
                 <option value="">Estado*</option>
                 <option value="Aguascalientes">Aguascalientes</option>
@@ -178,19 +310,19 @@
               </select>
             </td>
           </tr>
-          <tr class="grid mb-4">
+          <tr class="ventas-row">
             <td>
-              <label class="font-medium pl-2 text-textGray hidden"
-                >Otro Software</label
+              <label class="ventas-label"
+                >¿Usas algún sistema ERP o similar en tu negocio? ¿Si sí,
+                cuál?*</label
               >
             </td>
             <td>
               <input
-                class="bg-transparent border border-enabledBorder placeholder:text-secondary text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                placeholder="¿Qué software utilizas?"
+                class="ventas-input"
                 type="text"
                 name="cf_1394"
-                data-label="Otro Software"
+                data-label="Sistema ERP"
                 value=""
                 required=""
               />
@@ -289,7 +421,7 @@
       /><input
         type="submit"
         value="Quiero mi consultoría gratuita"
-        class="bg-orange text-white font-[600] py-2 px-4 rounded-lg mt-2 w-full appearance-none cursor-pointer hover:shadow-md transition-all duration-300"
+        class="ventas-submit"
       />
     </form>
     <script type="text/javascript">
