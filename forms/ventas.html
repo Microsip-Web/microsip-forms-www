@@ -584,5 +584,27 @@
         element.parentNode.removeChild(element);
       }
     </script>
+
+    <!-- URL Auto-Population Script -->
+    <script type="text/javascript">
+      // Automatically populate the CRM tracking hook with the current page URL
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get the current page URL
+        var currentUrl = window.location.href;
+
+        // Find the hidden input field using both possible selectors for reliability
+        var hookInput =
+          document.querySelector('input[name="cf_1321"]') ||
+          document.getElementById("hook");
+
+        if (hookInput) {
+          // Set the value to the current URL, replacing the placeholder
+          hookInput.value = currentUrl;
+          // console.log("CRM tracking hook populated with URL:", currentUrl);
+        } else {
+          // console.warn("CRM tracking hook input field not found");
+        }
+      });
+    </script>
   </body>
 </html>
