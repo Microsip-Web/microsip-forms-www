@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ventas New LP</title>
+  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    /* Ventas New Scoped CSS Styles */
+
+    /* Apply box-sizing to all form elements to prevent overflow */
+    .ventas-new-container,
+    .ventas-new-container *,
+    .ventas-new-input,
+    .ventas-new-textarea,
+    .ventas-new-select,
+    .ventas-new-checkbox,
+    .ventas-new-submit {
+      box-sizing: border-box;
+    }
+
+    .ventas-new-body {
+      background-color: white;
+    }
+
+    .ventas-new-container {
+      width: 100%;
+      max-width: 100%;
+      font-family: "Sora", sans-serif;
+      overflow-x: hidden;
+    }
+
+    .ventas-new-row {
+      display: grid;
+      margin-bottom: 0.5rem;
+      width: 100%;
+    }
+
+    .ventas-new-row-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+      width: 100%;
+    }
+
+    .ventas-new-label {
+      font-weight: 500;
+      padding-left: 0.5rem;
+      color: #717e8a;
+    }
+
+    .ventas-new-input {
+      background-color: #e9eaed;
+      color: #111827;
+      font-size: 0.875rem;
+      border-radius: 0.75rem;
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      padding: 0.625rem;
+      border: 2px solid transparent;
+      outline: none;
+      transition: all 0.15s ease-in-out;
+      box-sizing: border-box;
+    }
+
+    .ventas-new-input:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+
+    .ventas-new-textarea {
+      background-color: #e9eaed;
+      color: #111827;
+      font-size: 0.875rem;
+      border-radius: 0.75rem;
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      padding: 0.625rem;
+      resize: none;
+      height: 6rem;
+      min-height: 6rem;
+      max-height: 6rem;
+      appearance: none;
+      border: 2px solid transparent;
+      outline: none;
+      transition: all 0.15s ease-in-out;
+      box-sizing: border-box;
+    }
+
+    .ventas-new-textarea:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+
+    .ventas-new-select {
+      background-color: #e9eaed;
+      color: #111827;
+      font-size: 0.875rem;
+      border-radius: 0.75rem;
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      padding: 0.625rem;
+      appearance: none;
+      cursor: pointer;
+      border: 2px solid transparent;
+      outline: none;
+      transition: all 0.15s ease-in-out;
+      box-sizing: border-box;
+    }
+
+    .ventas-new-select:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+
+    .ventas-new-checkbox {
+      background-color: #e9eaed;
+      color: #111827;
+      font-size: 0.875rem;
+      border-radius: 0.5rem;
+      display: block;
+      height: 1.25rem;
+      width: 1.25rem;
+      appearance: none;
+      border: 2px solid transparent;
+      outline: none;
+      cursor: pointer;
+      transition: all 0.15s ease-in-out;
+      box-sizing: border-box;
+      flex-shrink: 0;
+    }
+
+    .ventas-new-checkbox:focus {
+      border-color: #ff8623;
+      box-shadow: 0 0 0 3px rgba(255, 134, 35, 0.1);
+    }
+
+    .ventas-new-checkbox:checked {
+      background-color: #ff8623;
+    }
+
+    .ventas-new-submit {
+      background-color: #ff8623;
+      color: white;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      margin-top: 0.5rem;
+      width: 100%;
+      max-width: 100%;
+      appearance: none;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      transition: all 0.3s ease;
+      box-sizing: border-box;
+    }
+
+    .ventas-new-submit:hover {
+      background-color: #e5751f;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    /*
+     * All styles above are scoped with ventas-new- prefix to ensure they only apply
+     * to this specific form and don't affect other parts of the website
+     */
+  </style>
+  <body class="ventas-new-body">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <form
+      id="__vtigerWebForm25790dad3426eea3ce5de725993dc88c"
+      class="__vtigerWebForm"
+      name="Formulario Campaña Generación 2025"
+      action="https://microsipmtz.mantic360.net/modules/Webforms/capture.php"
+      method="post"
+      accept-charset="utf-8"
+      enctype="multipart/form-data"
+    >
+      <input
+        type="hidden"
+        name="__vtrftk"
+        value="sid:2ea8419854e78fe4d172d8a64ea951b851461d36,1755882127"
+      /><input
+        type="hidden"
+        name="publicid"
+        value="25790dad3426eea3ce5de725993dc88c"
+      /><input type="hidden" name="urlencodeenable" value="1" /><input
+        type="hidden"
+        name="name"
+        value="Formulario Campaña Generación 2025"
+      />
+      <table class="ventas-new-container">
+        <tbody>
+          <tr class="ventas-new-row">
+            <td>
+              <label class="ventas-new-label">Nombres*</label>
+            </td>
+            <td>
+              <input
+                type="text"
+                name="firstname"
+                data-label="Nombres"
+                value=""
+                required=""
+                class="ventas-new-input"
+              />
+            </td>
+          </tr>
+          <tr class="ventas-new-row">
+            <td>
+              <label class="ventas-new-label">Apellidos*</label>
+            </td>
+            <td>
+              <input
+                type="text"
+                name="lastname"
+                data-label="Apellidos"
+                value=""
+                required=""
+                class="ventas-new-input"
+              />
+            </td>
+          </tr>
+          <tr class="ventas-new-row">
+            <td>
+              <label class="ventas-new-label">E-mail*</label>
+            </td>
+            <td>
+              <input
+                type="email"
+                name="email"
+                data-label="E-mail"
+                required=""
+                value=""
+                class="ventas-new-input"
+              />
+            </td>
+          </tr>
+          <tr class="ventas-new-row">
+            <td>
+              <label class="ventas-new-label">Tel o Cel*</label>
+            </td>
+            <td>
+              <input
+                type="text"
+                name="cf_1129"
+                data-label="Tel o Cel"
+                value=""
+                required=""
+                class="ventas-new-input"
+              />
+            </td>
+          </tr>
+          <tr class="ventas-new-row">
+            <td>
+              <label class="ventas-new-label"
+                >¿Usas algún sistema ERP o similar en tu negocio? ¿Si sí,
+                cuál?*</label
+              >
+            </td>
+            <td>
+              <input
+                class="ventas-new-input"
+                type="text"
+                name="cf_1394"
+                data-label="Sistema ERP"
+                value=""
+                required=""
+              />
+            </td>
+          </tr>
+          <tr class="ventas-new-row">
+            <td>
+              <label class="ventas-new-label">Mensaje*</label>
+            </td>
+            <td>
+              <textarea
+                name="cf_1323"
+                data-label="Mensaje"
+                required=""
+                class="ventas-new-textarea"
+              ></textarea>
+            </td>
+          </tr>
+          <tr class="ventas-new-row">
+            <td>
+              <label class="ventas-new-label">Estado*</label>
+            </td>
+            <td>
+              <select
+                name="cf_1315"
+                data-label="label:Estado+sitio+web"
+                required=""
+                class="ventas-new-select"
+              >
+                <option value="">Estado*</option>
+                <option value="Aguascalientes">Aguascalientes</option>
+                <option value="Baja California">Baja California</option>
+                <option value="Baja California Sur">Baja California Sur</option>
+                <option value="Campeche">Campeche</option>
+                <option value="Coahuila">Coahuila</option>
+                <option value="Colima">Colima</option>
+                <option value="Chiapas">Chiapas</option>
+                <option value="Chihuahua">Chihuahua</option>
+                <option value="CDMX">CDMX</option>
+                <option value="Durango">Durango</option>
+                <option value="Guanajuato">Guanajuato</option>
+                <option value="Guerrero">Guerrero</option>
+                <option value="Hidalgo">Hidalgo</option>
+                <option value="Jalisco">Jalisco</option>
+                <option value="Edo. de México">Edo. de México</option>
+                <option value="Michoacan">Michoacan</option>
+                <option value="Morelos">Morelos</option>
+                <option value="Nayarit">Nayarit</option>
+                <option value="Nuevo León">Nuevo León</option>
+                <option value="Oaxaca">Oaxaca</option>
+                <option value="Puebla">Puebla</option>
+                <option value="Querétaro">Querétaro</option>
+                <option value="Quintana Roo">Quintana Roo</option>
+                <option value="San Luis Potosí">San Luis Potosí</option>
+                <option value="Sinaloa">Sinaloa</option>
+                <option value="Sonora">Sonora</option>
+                <option value="Tabasco">Tabasco</option>
+                <option value="Tamaulipas">Tamaulipas</option>
+                <option value="Tlaxcala">Tlaxcala</option>
+                <option value="Veracruz">Veracruz</option>
+                <option value="Yucatán">Yucatán</option>
+                <option value="Zacatecas">Zacatecas</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input
+                type="hidden"
+                name="cf_1321"
+                data-label=""
+                value="www.microsip.com/ventas-or-mexico/
+                ventas---sistema-erp"
+                required=""
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <select
+                name="cf_1141"
+                data-label="label:Procedencia"
+                required=""
+                hidden=""
+              >
+                <option value="">Seleccionar valor</option>
+                <option value="Web">Web</option>
+                <option value="Web - Partner">Web - Partner</option>
+                <option value="Facebook">Facebook</option>
+                <option value="Chat">Chat</option>
+                <option value="Tel">Tel</option>
+                <option value="contacto@microsip.com">
+                  contacto@microsip.com
+                </option>
+                <option value="redes@microsip.com">redes@microsip.com</option>
+                <option value="ventasmexico@microsip.com">
+                  ventasmexico@microsip.com
+                </option>
+                <option value="Whatsapp Business">Whatsapp Business</option>
+                <option value="Campaña FB">Campaña FB</option>
+                <option value="Campaña FB Retargeting">
+                  Campaña FB Retargeting
+                </option>
+                <option value="Campaña FB Golfo">Campaña FB Golfo</option>
+                <option value="Campaña Noreste">Campaña Noreste</option>
+                <option value="Campaña Preventa">Campaña Preventa</option>
+                <option value="Campaña Retargeting">Campaña Retargeting</option>
+                <option value="Campaña CFDI">Campaña CFDI</option>
+                <option value="Campaña Preventa 2023">
+                  Campaña Preventa 2023
+                </option>
+                <option value="Campaña Preventa 2024">
+                  Campaña Preventa 2024
+                </option>
+                <option value="Preventa 2025">Preventa 2025</option>
+                <option value="Campaña generación 2024">
+                  Campaña generación 2024
+                </option>
+                <option value="Campaña generación 2025" selected="">
+                  Campaña generación 2025
+                </option>
+                <option value="TAC 2025">TAC 2025</option>
+                <option value="Talk Show">Talk Show</option>
+                <option value="En Persona">En Persona</option>
+                <option value="Email Mkt">Email Mkt</option>
+                <option value="Expo Ferretera 2021">Expo Ferretera 2021</option>
+                <option value="Expo Ferretera 2022">Expo Ferretera 2022</option>
+                <option value="Expo Ferretera 2023">Expo Ferretera 2023</option>
+                <option value="BNI">BNI</option>
+                <option value="Blog - Backlink">Blog - Backlink</option>
+                <option value="Otro">Otro</option>
+                <option value="Sin Información">Sin Información</option>
+              </select>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script
+        src="https://www.google.com/recaptcha/api.js?hl=es"
+        async
+        defer
+      ></script>
+      <div
+        class="g-recaptcha"
+        data-sitekey="6LfXMKsZAAAAACGRuPAKqie7am6XkoKq0-tZz-aJ"
+      ></div>
+      <input
+        type="hidden"
+        id="captchaUrl"
+        value="https://microsipmtz.mantic360.net/modules/Settings/Webforms/actions/CheckCaptcha.php"
+      /><input
+        type="hidden"
+        name="recaptcha_validation_value"
+        id="recaptcha_validation_value"
+        value="false"
+      /><input
+        type="submit"
+        value="Quiero mi consultoría gratuita"
+        class="ventas-new-submit"
+      />
+    </form>
+    <script type="text/javascript">
+      var _form_active = "";
+      window.onload = function () {
+        var N = navigator.appName,
+          ua = navigator.userAgent,
+          tem;
+        var M = ua.match(
+          /(opera|chrome|safari|firefox|msie)\/?\s*(\.?\d+(\.\d+)*)/i
+        );
+        if (M && (tem = ua.match(/version\/([\.\d]+)/i)) != null) M[2] = tem[1];
+        M = M ? [M[1], M[2]] : [N, navigator.appVersion, "-?"];
+        var browserName = M[0];
+        var _forms = document.getElementsByClassName("__vtigerWebForm");
+        for (var i = 0; i < _forms.length; i++) {
+          var form = _forms[i];
+          let inputs = form.elements;
+          form.onsubmit = function () {
+            let _formid = "#" + this.id;
+            let _formidname = this.id;
+            _form_active = this.id;
+            var required = [],
+              att,
+              val;
+            for (var i = 0; i < inputs.length; i++) {
+              att = inputs[i].getAttribute("required");
+              val = inputs[i].value;
+              type = inputs[i].type;
+              if (type == "email") {
+                if (val != "") {
+                  var elemLabel = inputs[i].getAttribute("label");
+                  var emailFilter =
+                    /^[_/a-zA-Z0-9]+([!"#$%&()*+,./:;<=>?\^_`{|}~-]?[a-zA-Z0-9/_/-])*@[a-zA-Z0-9]+([\_\-\.]?[a-zA-Z0-9]+)*\.([\-\_]?[a-zA-Z0-9])+(\.?[a-zA-Z0-9]+)?$/;
+                  var illegalChars = /[\(\)\<\>\,\;\:\"\[\]]/;
+                  if (!emailFilter.test(val)) {
+                    alert(
+                      "For " +
+                        elemLabel +
+                        " field please enter valid email address"
+                    );
+                    return false;
+                  } else if (val.match(illegalChars)) {
+                    alert(elemLabel + " field contains illegal characters");
+                    return false;
+                  }
+                }
+              }
+              if (att != null) {
+                if (val.replace(/^\s+|\s+$/g, "") == "") {
+                  required.push(inputs[i].getAttribute("label"));
+                }
+              }
+            }
+            if (required.length > 0) {
+              alert("The following fields are required: " + required.join());
+              return false;
+            }
+            var numberTypeInputs =
+              document.querySelectorAll("input[type=number]");
+            for (var i = 0; i < numberTypeInputs.length; i++) {
+              val = numberTypeInputs[i].value;
+              var elemLabel = numberTypeInputs[i].getAttribute("label");
+              var elemDataType = numberTypeInputs[i].getAttribute("datatype");
+              if (val != "") {
+                if (elemDataType == "double") {
+                  var numRegex = /^[+-]?\d+(\.\d+)?$/;
+                } else {
+                  var numRegex = /^[+-]?\d+$/;
+                }
+                if (!numRegex.test(val)) {
+                  alert(
+                    "For " + elemLabel + " field please enter valid number"
+                  );
+                  return false;
+                }
+              }
+            }
+            var dateTypeInputs = document.querySelectorAll("input[type=date]");
+            for (var i = 0; i < dateTypeInputs.length; i++) {
+              dateVal = dateTypeInputs[i].value;
+              var elemLabel = dateTypeInputs[i].getAttribute("label");
+              if (dateVal != "") {
+                var dateRegex =
+                  /^[1-9][0-9]{3}-(0[1-9]|1[0-2]|[1-9]{1})-(0[1-9]|[1-2][0-9]|3[0-1]|[1-9]{1})$/;
+                if (!dateRegex.test(dateVal)) {
+                  alert(
+                    "For " +
+                      elemLabel +
+                      " field please enter valid date in required format"
+                  );
+                  return false;
+                }
+              }
+            }
+            var inputElems = document.getElementsByTagName("input");
+            var totalFileSize = 0;
+            for (var i = 0; i < inputElems.length; i++) {
+              if (inputElems[i].type.toLowerCase() === "file") {
+                var file = inputElems[i].files[0];
+                if (typeof file !== "undefined") {
+                  var totalFileSize = totalFileSize + file.size;
+                }
+              }
+            }
+            if (totalFileSize > 52428800) {
+              alert("Maximum allowed file size including all files is 50MB.");
+              return false;
+            }
+            var getStatus = false;
+            var recaptchaValidationValue = document.querySelector(
+              _formid + " .g-recaptcha .g-recaptcha-response"
+            ).value;
+            var captchaUrl = document.querySelector(
+              _formid + " #captchaUrl"
+            ).value;
+            var url =
+              captchaUrl +
+              "?form=" +
+              _formidname +
+              "&recaptcha_response=" +
+              recaptchaValidationValue;
+            url = url + "&callback=JSONPCallback";
+            jsonp.fetch(url);
+            if (getStatus == false) {
+              return false;
+            }
+          };
+        }
+      };
+      var jsonp = {
+        callbackCounter: 0,
+        fetch: function (url) {
+          url = url + "&callId=" + this.callbackCounter;
+          var scriptTag = document.createElement("SCRIPT");
+          scriptTag.src = url;
+          scriptTag.async = true;
+          scriptTag.id = "JSONPCallback_" + this.callbackCounter;
+          scriptTag.type = "text/javascript";
+          document.getElementsByTagName("HEAD")[0].appendChild(scriptTag);
+          this.callbackCounter++;
+        },
+      };
+      function JSONPCallback(data) {
+        if (data.result.success == true) {
+          document.querySelector(
+            "#" + _form_active + " #recaptcha_validation_value"
+          ).value = true;
+          var form = document.getElementById(_form_active);
+          form.submit();
+        } else {
+          document.querySelector(
+            "#" + _form_active + " #recaptcha_validation_value"
+          ).value = false;
+          alert("Bot detectado");
+        }
+        var element = document.getElementById(
+          "JSONPCallback_" + data.result.callId
+        );
+        element.parentNode.removeChild(element);
+      }
+    </script>
+
+    <!-- URL Auto-Population Script -->
+    <script type="text/javascript">
+      // Automatically populate the CRM tracking hook with the current page URL
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get the current page URL
+        var currentUrl = window.location.href;
+
+        // Find the hidden input field using both possible selectors for reliability
+        var hookInput =
+          document.querySelector('input[name="cf_1321"]') ||
+          document.getElementById("hook");
+
+        if (hookInput) {
+          // Set the value to the current URL, replacing the placeholder
+          hookInput.value = currentUrl;
+          // console.log("CRM tracking hook populated with URL:", currentUrl);
+        } else {
+          // console.warn("CRM tracking hook input field not found");
+        }
+      });
+    </script>
+  </body>
+</html>
